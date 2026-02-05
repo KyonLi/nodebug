@@ -1,6 +1,6 @@
-# Hide UserDebug, Test-Keys and LineageOS
+# Hide UserDebug and Test-Keys
 
-Change some props and "remove" LineageOS ones.
+Change some props from test to release.
 
 ## Description
 
@@ -11,8 +11,6 @@ However, if you want to pass SafetyNet or any alternative, that can be a pain, d
 Also, some developers may use <code>test-keys</code> to sign their builds as opposed to <code>release-keys</code>, which is more of a [security concern](https://source.android.com/docs/core/ota/sign_builds) than anything. (Anyone can use the default <code>test-keys</code> to sign stuff, with the system just accepting those).
 
 So, this module dynamically gets system props from the device and patches them to change <code>userdebug</code> to <code>user</code> and <code>test-keys</code> to <code>release-keys</code>.
-
-Additionally, this module removes all LineageOS specific props, to prevent apps from identifying it by using them. This has a known issue; [Over-the-Air updates](https://source.android.com/docs/core/ota) don't work, which in my opinion is a small price to pay (and you can always just disable the module before tyring to update).
 
 The module is confirmed to work in LineageOS 19 (Android 12L) with Magisk 25+.
 
