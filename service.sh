@@ -1,9 +1,5 @@
 MODDIR=${0%/*}
 
-while [ "$(getprop sys.boot_completed)" != 1 ]; do
-    sleep 1
-done
-
 # Create a personalized system.prop
 getprop | grep "userdebug" >> "$MODDIR/tmp.prop"
 getprop | grep "test-keys" >> "$MODDIR/tmp.prop"
