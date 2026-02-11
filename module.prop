@@ -1,6 +1,6 @@
 id=nodebug
 name=Hide UserDebug and Test-Keys
-version=v1.1
-versionCode=1001
+version=v1.2
+versionCode=1002
 author=ez-me, kyon
 description=Change some props from test to release.

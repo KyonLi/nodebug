@@ -13,5 +13,3 @@ sed -i 's/test-keys/release-keys/g' "$MODDIR/tmp.prop"
 
 sort -u "$MODDIR/tmp.prop" > "$MODDIR/system.prop"
 rm "$MODDIR/tmp.prop"
-
-resetprop -n --file "$MODDIR/system.prop"
